@@ -1,0 +1,47 @@
+ClrHome
+Output(1,1,"I will flip a coin (10 trials of 10, so not significant) with a random predetermined probability of landing on heads. I'll show you my boxplot of the amount of time I landed on heads. Try to guess the probability. 
+Pause 
+10→dim(ʟDIST)
+10→dim(ʟXDIM)
+10→Xmax
+1→Xmin
+For(I,1,10,1)
+I→ʟXDIM(I)
+End
+0→K
+randInt(1,20)→T
+If T≤10
+Then
+1→L
+Else
+0→L
+End
+If L
+Then
+randInt(20,40)→P
+Else
+randInt(60,80)→P
+End
+0→H
+For(I,1,10,1)
+For(J,1,10,1)
+randInt(1,100)→C
+If C≤P
+H+1→H
+End
+H→ʟDIST(I)
+0→H
+End
+Plot1(Boxplot,ʟXDIM,ʟDIST
+PlotsOn 1
+DispGraph
+Pause 
+ClrHome 
+Disp ("Guess the probability: 
+Prompt A
+Disp "The actual probability was"
+Disp P
+Disp "If that seems off,
+Disp "consider there are
+Disp "anomalies when you work
+Disp "with a small dataset.
