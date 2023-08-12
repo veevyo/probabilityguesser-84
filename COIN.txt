@@ -1,13 +1,12 @@
 ClrHome
-Output(1,1,"I will flip a coin (10 trials of 10, so not significant) with a random predetermined probability of landing on heads. I'll show you my boxplot of the amount of time I landed on heads. Try to guess the probability. 
+Output(1,1,"I will flip a coin (30 trials of 30) with a random predetermined probability of landing on heads. I'll show you my boxplot of the amount of time I landed on heads. Try to guess the probability. 
 Pause 
-10→dim(ʟDIST)
-10→dim(ʟXDIM)
-10→Xmax
+ClrHome
+Output(3,1,"Loading… This may take a while…
+30→dim(ʟDIST)
+30→Xmax
 1→Xmin
-For(I,1,10,1)
-I→ʟXDIM(I)
-End
+5→Xscl
 0→K
 randInt(1,20)→T
 If T≤10
@@ -23,8 +22,8 @@ Else
 randInt(60,80)→P
 End
 0→H
-For(I,1,10,1)
-For(J,1,10,1)
+For(I,1,30,1)
+For(J,1,30,1)
 randInt(1,100)→C
 If C≤P
 H+1→H
@@ -32,7 +31,7 @@ End
 H→ʟDIST(I)
 0→H
 End
-Plot1(Boxplot,ʟXDIM,ʟDIST
+Plot1(Boxplot,ʟDIST
 PlotsOn 1
 DispGraph
 Pause 
@@ -41,7 +40,3 @@ Disp ("Guess the probability:
 Prompt A
 Disp "The actual probability was"
 Disp P
-Disp "If that seems off,
-Disp "consider there are
-Disp "anomalies when you work
-Disp "with a small dataset.
