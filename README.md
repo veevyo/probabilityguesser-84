@@ -4,5 +4,7 @@ https://github.com/veevyo/probabilityguesser-84/assets/41368076/0b8485f1-417a-42
 
 kind of a port of my probability guessing game to TI-BASIC
 
+# plans for future updates
+- allow user to choose how many trials to perform
 
 
