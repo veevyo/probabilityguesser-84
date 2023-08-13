@@ -1,6 +1,10 @@
 ClrHome
-Output(1,1,"I will flip a coin (30 trials of 30) with a random predetermined probability of landing on heads. I'll show you my boxplot of the amount of time I landed on heads. Try to guess the probability. 
+Output(1,1,"I will flip a coin (U trials of 30) with a random predetermined probability of landing on heads. I'll show you my boxplot of the amount of times I landed on heads. Try to guess the probability. 
 Pause 
+ClrHome
+Output(3,1,"U stood for USER!! How many trials should we do, user? (that's U!!)
+Output(6,1,"Note: A significant amount would be 30 trials of 30.
+Prompt U
 ClrHome
 Output(3,1,"Loading… This may take a while…
 30→dim(ʟDIST)
@@ -22,7 +26,7 @@ Else
 randInt(60,80)→P
 End
 0→H
-For(I,1,30,1)
+For(I,1,U,1)
 For(J,1,30,1)
 randInt(1,100)→C
 If C≤P
